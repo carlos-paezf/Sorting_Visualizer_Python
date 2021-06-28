@@ -216,8 +216,11 @@ def set_speed():
 We will import the algorithms in `main.py`. 
 
 ```python
-from algorithms.bubblesort import bubble_sort
+from algorithms.bubbleSort import bubble_sort
 from algorithms.mergeSort import merge_sort
+from algorithms.selectionSort import selection_sort
+from algorithms.insertionSort import insertion_sort
+from algorithms.quickSort import quick_sort
 ```
 
 ```python
@@ -228,6 +231,14 @@ def sort():
         bubble_sort(data, draw_data, time_tick)
     elif algorithm_menu.get() == 'Merge Sort':
         merge_sort(data, 0, len(data)-1, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Selection Sort':
+        selection_sort(data, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Insertion Sort':
+        insertion_sort(data, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Quick Sort':
+        quick_sort(data, 0, len(data)-1, draw_data, time_tick)
+    else: 
+        pass
 ```
 
 ## References:
@@ -241,3 +252,5 @@ Merge Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https:
 Selection Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/tutorial/
 
 Insertion Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/tutorial/
+
+Quick Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/
