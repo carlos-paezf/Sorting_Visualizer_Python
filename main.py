@@ -8,6 +8,7 @@ from algorithms.mergeSort import merge_sort
 from algorithms.selectionSort import selection_sort
 from algorithms.insertionSort import insertion_sort
 from algorithms.quickSort import quick_sort
+from algorithms.countingSort import counting_sort
 
 
 root = Tk()
@@ -17,7 +18,7 @@ root.config(bg = WHITE)
 
 
 algorithm_name = StringVar()
-algorithm_list = ['Bubble Sort', 'Merge Sort', 'Selection Sort', 'Insertion Sort', 'Quick Sort']
+algorithm_list = ['Bubble Sort', 'Merge Sort', 'Selection Sort', 'Insertion Sort', 'Quick Sort', 'Counting Sort']
 
 speed_name = StringVar()
 speed_list = ['Fast', 'Medium', 'Slow']
@@ -73,6 +74,8 @@ def sort():
         insertion_sort(data, draw_data, time_tick)
     elif algorithm_menu.get() == 'Quick Sort':
         quick_sort(data, 0, len(data)-1, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Counting Sort':
+        counting_sort(data, draw_data, time_tick)
     else: 
         pass
 
