@@ -66,7 +66,7 @@ Now, we will add some variables and functions. We will edit the functions one by
 *algo_list* is to select which algorithm we want to use to sort
 ```python
 algorithm_name = StringVar()
-algo_list = ['Bubble Sort', 'Merge Sort']
+algorithm_list = ['Bubble Sort', 'Merge Sort', 'Selection Sort', 'Insertion Sort', 'Quick Sort', 'Counting Sort']
 ```
 
 *speed_list* is for selecting sorting speed
@@ -221,6 +221,7 @@ from algorithms.mergeSort import merge_sort
 from algorithms.selectionSort import selection_sort
 from algorithms.insertionSort import insertion_sort
 from algorithms.quickSort import quick_sort
+from algorithms.countingSort import counting_sort
 ```
 
 ```python
@@ -237,6 +238,8 @@ def sort():
         insertion_sort(data, draw_data, time_tick)
     elif algorithm_menu.get() == 'Quick Sort':
         quick_sort(data, 0, len(data)-1, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Counting Sort':
+        counting_sort(data, draw_data, time_tick)
     else: 
         pass
 ```
@@ -254,3 +257,5 @@ Selection Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. ht
 Insertion Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/tutorial/
 
 Quick Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/
+
+Counting Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/counting-sort/tutorial/
