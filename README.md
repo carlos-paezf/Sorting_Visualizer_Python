@@ -66,7 +66,15 @@ Now, we will add some variables and functions. We will edit the functions one by
 *algo_list* is to select which algorithm we want to use to sort
 ```python
 algorithm_name = StringVar()
-algorithm_list = ['Bubble Sort', 'Merge Sort', 'Selection Sort', 'Insertion Sort', 'Quick Sort', 'Counting Sort']
+algorithm_list = [
+    'Bubble Sort', 
+    'Merge Sort', 
+    'Selection Sort', 
+    'Insertion Sort', 
+    'Quick Sort', 
+    'Counting Sort',
+    'Radix Sort'
+]
 ```
 
 *speed_list* is for selecting sorting speed
@@ -222,6 +230,7 @@ from algorithms.selectionSort import selection_sort
 from algorithms.insertionSort import insertion_sort
 from algorithms.quickSort import quick_sort
 from algorithms.countingSort import counting_sort
+from algorithms.radixSort import radix_sort
 ```
 
 ```python
@@ -240,6 +249,8 @@ def sort():
         quick_sort(data, 0, len(data)-1, draw_data, time_tick)
     elif algorithm_menu.get() == 'Counting Sort':
         counting_sort(data, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Radix Sort':
+        radix_sort(data, draw_data, time_tick)
     else: 
         pass
 ```
@@ -259,3 +270,7 @@ Insertion Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. ht
 Quick Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/
 
 Counting Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/counting-sort/tutorial/
+
+Radix Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/radix-sort/tutorial/
+
+GeeksforGeeks. (2021, 15 junio). Radix Sort. https://www.geeksforgeeks.org/radix-sort/
