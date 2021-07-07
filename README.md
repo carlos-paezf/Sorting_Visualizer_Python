@@ -290,3 +290,7 @@ Counting Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. htt
 Radix Sort Tutorials & Notes | Algorithms. (2016, 27 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/radix-sort/tutorial/
 
 GeeksforGeeks. (2021, 15 junio). Radix Sort. https://www.geeksforgeeks.org/radix-sort/
+
+Heap Sort Tutorials & Notes | Algorithms. (2016, 24 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/heap-sort/tutorial/
+
+GeeksforGeeks. (2020, 30 diciembre). Python Program for Heap Sort. https://www.geeksforgeeks.org/python-program-for-heap-sort/
