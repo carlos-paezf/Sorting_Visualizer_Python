@@ -10,6 +10,7 @@ from algorithms.insertionSort import insertion_sort
 from algorithms.quickSort import quick_sort
 from algorithms.countingSort import counting_sort
 from algorithms.radixSort import radix_sort
+from algorithms.heapSort import heap_sort
 
 
 root = Tk()
@@ -19,7 +20,16 @@ root.config(bg = WHITE)
 
 
 algorithm_name = StringVar()
-algorithm_list = ['Bubble Sort', 'Merge Sort', 'Selection Sort', 'Insertion Sort', 'Quick Sort', 'Counting Sort', 'Radix Sort']
+algorithm_list = [
+    'Bubble Sort', 
+    'Merge Sort', 
+    'Selection Sort', 
+    'Insertion Sort', 
+    'Quick Sort', 
+    'Counting Sort', 
+    'Radix Sort', 
+    'Heap Sort'
+]
 
 speed_name = StringVar()
 speed_list = ['Fast', 'Medium', 'Slow']
@@ -79,6 +89,8 @@ def sort():
         counting_sort(data, draw_data, time_tick)
     elif algorithm_menu.get() == 'Radix Sort':
         radix_sort(data, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Heap Sort':
+        heap_sort(data, draw_data, time_tick)
     else: 
         pass
 

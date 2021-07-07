@@ -10,11 +10,11 @@ In this project, we will a Sorting Algorithm Visualizar using Python and Tkinter
     <img src="images/file_structure.png"/>
 </p>
 
-`main.py` will be our main Python file which we will execute. `colors.py` will contain some hexadecimal values of colors that we'll need. The file `__init__.py`, will allow the algorithms folder to act as a Python package. 
+`main.py` will be our main Python file which we will execute. `colors.py` will contain some hexadecimal values of colors that we'll need. The file `__init__.py`, will allow the algorithms folder to act as a Python package.
 
 ## colors.py
 
-In this file, we will store some hexadecimal values of colors as variables. 
+In this file, we will store some hexadecimal values of colors as variables.
 
 ```python
 DARK_GRAY = '#65696B'
@@ -32,7 +32,7 @@ PURPLE = '#BF01FB'
 
 ## main.py
 
-This file will be our main executable file. 
+This file will be our main executable file.
 
 ### Interface
 
@@ -56,14 +56,15 @@ root.mainloop()
 ### Variables and Empty Functions
 
 We will need random to create an array
+
 ```python
 import random
 ```
 
 Now, we will add some variables and functions. We will edit the functions one by one. For now, we will just `pass`.
 
-
 *algo_list* is to select which algorithm we want to use to sort
+
 ```python
 algorithm_name = StringVar()
 algorithm_list = [
@@ -73,40 +74,47 @@ algorithm_list = [
     'Insertion Sort', 
     'Quick Sort', 
     'Counting Sort',
-    'Radix Sort'
+    'Radix Sort',
+    'Heap Sort'
 ]
 ```
 
 *speed_list* is for selecting sorting speed
+
 ```python
 speed_name = StringVar()
 speed_list = ['Fast', 'Medium', 'Slow']
 ```
 
-This empty list will be filled with random values every time we generate a new array 
+This empty list will be filled with random values every time we generate a new array.
+
 ```python
 data = []
 ```
 
-This function will draw randomly generated list data[] on the canvas as vertical bars
+This function will draw randomly generated list data[] on the canvas as vertical bars.
+
 ```python
 def draw_data(data, colorArray):
     pass
 ```
 
 This function will generate an array with random values every time we hit the generate button.
+
 ```python
 def generate():
     pass
 ```
 
 This function will set the sorting speed
+
 ```python
 def set_speed():
     pass
 ```
 
 This function will trigger a selected algorithm and start sorting
+
 ```python
 def sort():
     pass
@@ -130,6 +138,7 @@ UI_frame.grid(row=0, column=0, padx=10, pady=5)
 ```
 
 Dropdown to select sorting algorithm
+
 ```python
 l1 = Label(UI_frame, text='Algorithm: ', bg=WHITE)
 l1.grid(row=0, column=0, padx=10, pady=5, sticky=W)
@@ -139,6 +148,7 @@ algorithm_menu.current(0)
 ```
 
 Dropdown to select sorting speed
+
 ```python
 l2 = Label(UI_frame, text='Sorting Speed: ', bg=WHITE)
 l2.grid(row=1, column=0, padx=10, pady=5, sticky=W)
@@ -148,18 +158,21 @@ speed_menu.current(0)
 ```
 
 Button for generating array
+
 ```python
 b1 = Button(UI_frame, text='Generate Array', command=generate, bg=LIGHT_GRAY, width=20)
 b1.grid(row=2, column=0, padx=5, pady=5)
 ```
 
 Sort button
+
 ```python
 b2 = Button(UI_frame, text='Sort', command=sort, bg=LIGHT_GRAY, width=20)
 b2.grid(row=2, column= 1, padx=5, pady=5)
 ```
 
 Canvas to draw our array
+
 ```python
 canvas = Canvas(root, width=800, height=400, bg=WHITE)
 canvas.grid(row=1, column=0, padx=10, pady=5)
@@ -171,7 +184,7 @@ Now it's time to fill up the functions that we left empty before.
 
 #### `draw_data()`
 
-This function will convert the elements of `data[]` into vertical bars and draw them into the window. 
+This function will convert the elements of `data[]` into vertical bars and draw them into the window.
 
 ```python
 def draw_data(data, colorArray):
@@ -221,7 +234,7 @@ def set_speed():
 
 #### `sort()`
 
-We will import the algorithms in `main.py`. 
+We will import the algorithms in `main.py`.
 
 ```python
 from algorithms.bubbleSort import bubble_sort
@@ -231,6 +244,7 @@ from algorithms.insertionSort import insertion_sort
 from algorithms.quickSort import quick_sort
 from algorithms.countingSort import counting_sort
 from algorithms.radixSort import radix_sort
+from algorithms.heapSort import heap_sort
 ```
 
 ```python
@@ -251,6 +265,8 @@ def sort():
         counting_sort(data, draw_data, time_tick)
     elif algorithm_menu.get() == 'Radix Sort':
         radix_sort(data, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Heap Sort':
+        heap_sort(data, draw_data, time_tick)
     else: 
         pass
 ```
