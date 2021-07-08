@@ -11,6 +11,7 @@ from algorithms.quickSort import quick_sort
 from algorithms.countingSort import counting_sort
 from algorithms.radixSort import radix_sort
 from algorithms.heapSort import heap_sort
+from algorithms.bucketSort import bucket_sort
 
 
 root = Tk()
@@ -28,7 +29,8 @@ algorithm_list = [
     'Quick Sort', 
     'Counting Sort', 
     'Radix Sort', 
-    'Heap Sort'
+    'Heap Sort',
+    'Bucket Sort'
 ]
 
 speed_name = StringVar()
@@ -91,6 +93,8 @@ def sort():
         radix_sort(data, draw_data, time_tick)
     elif algorithm_menu.get() == 'Heap Sort':
         heap_sort(data, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Bucket Sort':
+        bucket_sort(data, len(data), draw_data, time_tick)
     else: 
         pass
 

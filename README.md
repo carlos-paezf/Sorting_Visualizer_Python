@@ -75,7 +75,8 @@ algorithm_list = [
     'Quick Sort', 
     'Counting Sort',
     'Radix Sort',
-    'Heap Sort'
+    'Heap Sort',
+    'Bucket Sort'
 ]
 ```
 
@@ -245,6 +246,7 @@ from algorithms.quickSort import quick_sort
 from algorithms.countingSort import counting_sort
 from algorithms.radixSort import radix_sort
 from algorithms.heapSort import heap_sort
+from algorithms.bucketSort import bucket_sort
 ```
 
 ```python
@@ -267,6 +269,8 @@ def sort():
         radix_sort(data, draw_data, time_tick)
     elif algorithm_menu.get() == 'Heap Sort':
         heap_sort(data, draw_data, time_tick)
+    elif algorithm_menu.get() == 'Bucket Sort':
+        bucket_sort(data, len(data), draw_data, time_tick)
     else: 
         pass
 ```
@@ -294,3 +298,7 @@ GeeksforGeeks. (2021, 15 junio). Radix Sort. https://www.geeksforgeeks.org/radix
 Heap Sort Tutorials & Notes | Algorithms. (2016, 24 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/heap-sort/tutorial/
 
 GeeksforGeeks. (2020, 30 diciembre). Python Program for Heap Sort. https://www.geeksforgeeks.org/python-program-for-heap-sort/
+
+Bucket Sort Tutorials & Notes | Algorithms. (2016, 24 abril). HackerEarth. https://www.hackerearth.com/practice/algorithms/sorting/bucket-sort/tutorial/
+
+GeeksforGeeks. (2021, 8 junio). Bucket Sort. https://www.geeksforgeeks.org/bucket-sort-2/
